@@ -5,4 +5,13 @@ const myTodo = [
   { id: 3, todo: "Call mom" },
   { id: 4, todo: "Wash dishes" },
 ];
-// เริ่มเขียนโค้ดตรงนี้
+
+myTodo.push({ id: 5, todo: "Walk the dog" });
+console.log(myTodo);
+
+myTodo[3] = { id: 4, todo: "Go to the gym" };
+
+myTodo.pop();
+console.log(myTodo);
+
+console.log(myTodo[3]);

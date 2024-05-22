@@ -18,4 +18,9 @@ const products = [
 ];
 
 const promotionCode = "";
-// เริ่มเขียนโค้ดตรงนี้
+
+function calculateTotalPrice(products, promotionCode) {
+  if ((promotionCode = "")) {
+    return;
+  }
+}
