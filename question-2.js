@@ -10,15 +10,20 @@ console.log(inventory);
 inventory.push({ name: "Orange", price: 20, quantity: 300 });
 console.log(inventory);
 
-//console.log(inventory[0].price)
-// allPrice = [];
-// for(let n=0; n<inventory.length; n++){
-//   allPrice[n] = inventory[n].price
-// }
-// console.log(allPrice)
+let amountFruitPrice  = [] ;
+for (let n=0; n<inventory.length; n++){
+  amountFruitPrice[n] = inventory[n].price * inventory[n].quantity
+}
 
-// allQuantity = [];
-// for(let n=0; n<inventory.length; n++){
-//   allQuantity[n] = inventory[n].quantity
-// }
-// allQuantity
+console.log(amountFruitPrice)
+
+function sumValue(accumulator,currentvalue){
+  return accumulator + currentvalue;
+}
+
+let totalPrice = amountFruitPrice.reduce(sumValue,0)
+console.log("มูลค่ารวมของจำนวนสินค้าทั้งหมดในสต็อก " + totalPrice + " บาท")
+
+
+
+

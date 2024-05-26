@@ -15,3 +15,5 @@ myTodo.pop();
 console.log(myTodo);
 
 console.log(myTodo[3]);
+
+console.log("To-do id: " + myTodo[3].id + ", " + myTodo[3].todo);

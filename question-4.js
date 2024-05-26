@@ -7,29 +7,26 @@ const inventory = [
 
 //console.log(inventory[0].quantity)
 let minQuantity;
-allQuantity = [];
 
 for (let n = 0; n < inventory.length; n++) {
-  allQuantity[n] = inventory[n].quantity;
-}
-
-console.log(allQuantity);
-
-for (let n = 0; n < allQuantity.length; n++) {
-  if (minQuantity === 0) {
-    minQuantity = allQuantity[n];
-  } else if (minQuantity > allQuantity[n]) {
-    minQuantity = allQuantity[n];
+  if (n === 0) {
+    minQuantity = inventory[n].quantity;
+  } else if (minQuantity > inventory[n].quantity) {
+    minQuantity = inventory[n].quantity;
   }
 }
 
 console.log(minQuantity);
 
-// for(let n=0; n<inventory.length; n = n+1){
-//   if(inventory[n].quantity<inventory[n+1].quantity){
-//     minQuantity = inventory[n].quantity
-//   } else if(inventory[n].quantity>inventory[n+1].quantity){
-//     minQuantity = inventory[n+1].quantity
-//   }
-// }
-// console.log(minQuantity)
+let nameMinQantity;
+
+for (let n = 0; n < inventory.length; n++) {
+  if (minQuantity === inventory[n].quantity) {
+    nameMinQantity = inventory[n].name;
+  }
+}
+console.log(nameMinQantity);
+
+console.log(
+  "สินค้าที่มีจำนวนต่ำที่สุดในคลังสินค้าคือ " + nameMinQantity + " ซึ่งมี " + minQuantity + " ชิ้น"
+);
